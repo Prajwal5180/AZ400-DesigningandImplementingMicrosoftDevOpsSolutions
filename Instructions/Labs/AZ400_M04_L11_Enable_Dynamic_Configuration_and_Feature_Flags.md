@@ -109,9 +109,9 @@ Let's start by importing the CI pipeline named **eshoponweb-ci.yml**.
        - **Resources**: it is prepared to automatically trigger based on CI pipeline completion. It also downloads the repository for the bicep file.
        - **AzureResourceManagerTemplateDeployment**: Deploys the Azure Web App using bicep template.
 
-  7. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to **Pipelines(1)>Pipelines(2)** and          click on the recently created pipeline. Click on the **ellipsis(3)** and **Rename/move(4)** option. Name it **eshoponweb-cd-webapp-code(5)** and click on          **Save(6)**.
+  7. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to **Pipelines(1)>Pipelines(2)** and click on the recently created pipeline. Click on the **ellipsis(3)** and **Rename/move(4)** option. Name it **eshoponweb-cd-webapp-code(5)** and click on **Save(6)**.
 
-     ![](images/37.rename-1.png)   
+     ![](images/az-400-jan25-15.png)   
      
      ![](images/38.rename-2.png) 
 
@@ -167,7 +167,7 @@ If you want to know how to implement this in your application, please take a loo
 
    ![](images/az-400-jan25-22.png)
    
-5. In the **Members(1)** section, check **Manage Identity(2)** then click on **+ Select members(3)**. In the select manage identities tab select **Managed Identity(4)** as **App Service** of your **Web App(5)** (they should have the same name) and then click on **Select(6)**.
+5. In the **Members(1)** section, check **Manage Identity(2)** then click on **+ Select members(3)**. In the select manage identities tab select **Managed Identity** as **App Service (4)** of your **Web App(5)** (they should have the same name) and then click on **Select(6)**.
 
    ![](images/az-400-jan25-23.png)
    
@@ -191,13 +191,13 @@ In order to make sure that your website is accessing App Configuration, you need
         - **Name:** UseAppConfig
         - **Value:** true
 
-         ![](images/az-400-jan25-24.png)
+            ![](images/az-400-jan25-24.png)
       
     - Second app setting
         - **Name:** AppConfigEndpoint
         - **Value:** *the value you saved/copied previously from App Configuration Endpoint. It should look like https://appcs-<inject key="DeploymentID" enableCopy="false"/>.azconfig.io*
       
-         ![](images/az-400-jan25-25.png)
+            ![](images/az-400-jan25-25.png)
       
 5. Click on **Apply** then **Confirm** and wait for the settings to be updated.
    
@@ -243,7 +243,7 @@ Let's continue to test the Feature manager.
     - **Feature flag name(2):** **SalesWeekend**
    and click **Apply(3)** then go back to your website and refresh the page.
    
-      ![](images/64.salesweekend.png)
+      ![](images/az-400-jan25-40.png)
     
 3. You should see an image with text **ALL T-SHIRTS ON SALE THIS WEEKEND**.
 
