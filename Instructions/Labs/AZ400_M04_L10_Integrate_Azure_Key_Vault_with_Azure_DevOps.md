@@ -301,3 +301,5 @@ In this lab, you integrated Azure Key Vault with an Azure DevOps pipeline by usi
 - Created an Azure service principal to provide access to secrets in the Azure Key vault.
 - Configured permissions to allow the service principal to read the secret.
 - Configured pipeline to retrieve the password from the Azure Key vault and pass it on to subsequent tasks.
+
+### You have successfully completed the lab. Click on **Next >>** to procced with next exercise.
