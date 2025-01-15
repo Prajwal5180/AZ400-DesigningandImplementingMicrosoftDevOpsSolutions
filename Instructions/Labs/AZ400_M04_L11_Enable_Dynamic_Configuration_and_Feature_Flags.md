@@ -45,7 +45,7 @@ Let's start by importing the CI pipeline named **eshoponweb-ci.yml**.
 
 3. Select the **eShopOnWeb** repository.
 
-   ![](images/10.selecteshoponwebrepo.png)
+   ![](images/az-400-jan25-11.png)
 
 4. Select **Existing Azure Pipelines YAML File**.
 
