@@ -41,7 +41,7 @@ Let's start by importing the CI pipeline named **eshoponweb-ci.yml**.
    
 2. Select **Azure Repos Git (Yaml)**.
 
-   ![](images/9.selectazurereposgityml.png)
+   ![](images/az-400-jan25-10.png)
 
 3. Select the **eShopOnWeb** repository.
 
@@ -49,11 +49,11 @@ Let's start by importing the CI pipeline named **eshoponweb-ci.yml**.
 
 4. Select **Existing Azure Pipelines YAML File**.
 
-   ![](images/AZ-400-ss.png)
+   ![](images/az-400-jan25-12.png)
 
 5. Select the **/.ado/eshoponweb-ci.yml** file then click on **Continue**.
 
-   ![](images/12.ymfilepath.png)
+   ![](images/az-400-jan25-13.png)
 
 6. Click the **Run** button to run the pipeline.
 
@@ -61,9 +61,9 @@ Let's start by importing the CI pipeline named **eshoponweb-ci.yml**.
 
 7. Your pipeline will take a name based on the project name. Let's **rename** it for identifying the pipeline better. Go to **Pipelines>Pipelines** and click on the recently created pipeline. Click on the **ellipsis** and **Rename/move** option. Name it **eshoponweb-ci** and click on **Save**.
 
-   ![](images/14.renamepipeline.png)
+   ![](images/az-400-jan25-15.png)
    
-   ![](images/lab-11-1.png)
+   ![](images/az-400-jan25-14.png)
 
  ## Task 2: Import and run the CD pipeline
  
@@ -71,19 +71,19 @@ Let's start by importing the CI pipeline named **eshoponweb-ci.yml**.
  
    1. Go to **Pipelines(1)>Pipelines(2)** and Click on **New pipeline(3)** button
 
-      ![](images/30.newcdpipeline.png)
+      ![](images/az-400-jan25-16.png)
 
    2. Select **Azure Repos Git (Yaml)**
 
-      ![](images/31.newcd-2.png)
+      ![](images/az-400-jan25-10.png)
 
    3. Select the **eShopOnWeb** repository
 
-      ![](images/32.newcdreposelect-3.png)
+      ![](images/az-400-jan25-11.png)
 
    4. Select **Existing Azure Pipelines YAML File**
 
-      ![](images/33.newpipeline-4.png)
+      ![](images/az-400-jan25-12.png)
 
    5. Select the **/.ado/eshoponweb-cd-webapp-code.yml(1)** file then click on **Continue(2)**
 
@@ -137,7 +137,7 @@ If you want to know how to implement this in your application, please take a loo
     - Give a unique name **appcs-<inject key="DeploymentID" enableCopy="false"/>** **(4)**.
     - Select the **Free(5)** pricing tier
 
-    ![](images/41.createappconfig-2.png)
+      ![](images/az-400-jan25-18.png)
      
 3. Click on **Review + create(6)** then **Create**
 
@@ -155,21 +155,21 @@ If you want to know how to implement this in your application, please take a loo
    
 2. In the **Settings(2)** section, click on **Identity(3)** then switch status to **On(4)** in the **System Assigned** section, click **save(5)>yes(6)** and wait a few seconds for the operation to finish.
 
-   ![](images/45.managedidentity-1.png)
+   ![](images/az-400-jan25-19.png)
    
-   ![](images/46.managedidentity-2.png)
+   ![](images/az-400-jan25-20.png)
    
 3. Go back to the **App Configuration(1)** service and click on **Access control(IAM)(2)** then **+Add(3)->Add role assignment(4)**.
 
-   ![](images/47.roleassignment-1.png)
+   ![](images/az-400-jan25-21.png)
    
 4. In the **Role(1)** section, select **App Configuration Data Reader(2)** and click on **Next(3)**.
 
-   ![](images/48.roleassignment-2.png)
+   ![](images/az-400-jan25-22.png)
    
 5. In the **Members(1)** section, check **Manage Identity(2)** then click on **+ Select members(3)**. In the select manage identities tab select **Managed Identity(4)** as **App Service** of your **Web App(5)** (they should have the same name) and then click on **Select(6)**.
 
-   ![](images/49.roleassinment-3.png)
+   ![](images/az-400-jan25-23.png)
    
 6. Click on **Review + assign** twice.
 
@@ -191,13 +191,13 @@ In order to make sure that your website is accessing App Configuration, you need
         - **Name:** UseAppConfig
         - **Value:** true
 
-         ![](images/52.1stappsetting.png)
+         ![](images/az-400-jan25-24.png)
       
     - Second app setting
         - **Name:** AppConfigEndpoint
         - **Value:** *the value you saved/copied previously from App Configuration Endpoint. It should look like https://appcs-<inject key="DeploymentID" enableCopy="false"/>.azconfig.io*
       
-         ![](images/53.2ndappsetting.png)
+         ![](images/az-400-jan25-25.png)
       
 5. Click on **Apply** then **Confirm** and wait for the settings to be updated.
    
@@ -210,9 +210,9 @@ In order to make sure that your website is accessing App Configuration, you need
 1. In your website, select **Visual Studio(2)** in the **Brand(1)** drop-down list and click on the arrow button (**>(3)**).
 
    ![](images/58.brandvisualstudio.png)
-2. You will see a message saying **"THERE ARE NO RESULTS THAT MATCH YOUR SEARCH"(4)**.
+2. You will see a message saying **THERE ARE NO RESULTS THAT MATCH YOUR SEARCH(4)**.
 
-   ![](images/59.brandvsmsg.png)
+   ![](images/az-400-jan25-29.png)
    
 The goal of this Lab is to be able to update that value without updating the website's code or redeploying it.
 
@@ -221,9 +221,9 @@ The goal of this Lab is to be able to update that value without updating the web
     - **Value(7):** *type your custom message*
    Click **Apply(8)** then go back to your website and refresh the webapp browser page.
    
-   ![](images/60.appconfigkeyvalue.png)
+   ![](images/az-400-jan25-26.png)
    
-   ![](images/61.appconfigkeyvaluecreate.png)
+   ![](images/az-400-jan25-27.png)
    
 4. You should see your new message instead of the old default value.
 
@@ -236,14 +236,14 @@ Congratulations! In this task, you tested the **Configuration explorer** in Azur
 Let's continue to test the Feature manager.
 1. In order to try this, go back to **App Configuration(1)**. In the **Operations(2)** section, select **Feature manager(3)**.
 
-   ![](images/63.featureflag-1.png)
+   ![](images/az-400-jan25-30.png)
    
-2. Click on **+ Create(4)** and select **Feature flag** from the dropdown then add:
+2. Click on **+ Create(4)** and select **Feature flag (5)** from the dropdown then add:
     - **Enable feature flag(1):** Checked
     - **Feature flag name(2):** **SalesWeekend**
    and click **Apply(3)** then go back to your website and refresh the page.
    
-   ![](images/64.salesweekend.png)
+      ![](images/64.salesweekend.png)
     
 3. You should see an image with text **ALL T-SHIRTS ON SALE THIS WEEKEND**.
 
@@ -251,7 +251,7 @@ Let's continue to test the Feature manager.
    
 4. You can disable this feature in App Configuration and then you would see that the image disappears.
 
-   ![](images/66.disableflag.png)
+   ![](images/az-400-jan25-41.png)
    
    ![](images/67.dissappearmsg.png)
 

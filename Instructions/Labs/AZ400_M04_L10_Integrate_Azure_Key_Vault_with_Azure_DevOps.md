@@ -60,7 +60,7 @@ In this task, you will create an **eShopOnWeb** Azure DevOps project to be used 
 
 1.  On your lab computer, in a browser window open your Azure DevOps organization. Click on **New Project**. Give your project the name **eShopOnWeb** and choose **Scrum** on the **Work item process** dropdown. Click on **+ Create project**.
 
-    ![Create Project](images/lab-400-1.png)
+    ![Create Project](images/az-400-jan25-1.png)
 
 ## Task 3: Import eShopOnWeb Git Repository
 
@@ -68,7 +68,7 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
 
 1.  On your lab computer, in a browser window open your Azure DevOps organization and the previously created **eShopOnWeb** project. Click on **Repos>Files** , **Import**. On the **Import a Repository** window, paste the following URL https://github.com/MicrosoftLearning/eShopOnWeb.git  and click on **Import**:
 
-    ![Import Repository](images/lab-400-21.png)
+    ![Import Repository](images/az-400-jan25-2.png)
 
 1. The repository is organized the following way:
     - **.ado** folder contains Azure DevOps YAML pipelines.
@@ -82,6 +82,8 @@ In this task you will import the eShopOnWeb Git repository that will be used by 
 1. Go to **Repos>Branches**.
 1. Hover on the **main** branch then click the ellipsis on the right of the column.
 1. Click on **Set as default branch**.
+
+    ![Import Repository](images/az-400-jan25-3.png)
 
 # Exercise 1: Setup CI pipeline to build eShopOnWeb container
 
@@ -126,9 +128,11 @@ A Service Principal is automatically created by Azure Pipelines, when you connec
 
     > **Note**: The command will generate a JSON output. Copy the output to text file. You will need it later in this lab.
 
+    ![Import Repository](images/update-1.png)
+
 1. Next, from the lab computer, start a web browser, navigate to the Azure DevOps **eShopOnWeb** project. Click on **Project Settings > Service connections (under Pipelines)** and **Create service connection**.
 
-    ![New Service Connection](images/lab-400-3.png)
+    ![New Service Connection](images/az-400-jan25-4.png)
 
 1. On the **New service connection** blade, select **Azure Resource Manager** and **Next** (may need to scroll down).
 
@@ -147,7 +151,7 @@ A Service Principal is automatically created by Azure Pipelines, when you connec
 
 In this task, you will import an existing CI YAML pipeline definition, modify and run it. It will create a new Azure Container Registry (ACR) and build/publish the eShopOnWeb container images.
 
-1. From the lab computer, start a web browser, navigate to the Azure DevOps **eShopOnWeb** project. Go to **Pipelines>Pipelines** and click on **Create Pipeline** (or **New pipeline**).
+1. From the lab computer, start a web browser, navigate to the Azure DevOps **eShopOnWeb** project. Go to **Pipelines > Pipelines** and click on **Create Pipeline**.
 
 1.  On the **Where is your code?** window, select **Azure Repos Git (YAML)** and select the **eShopOnWeb** repository.
 
@@ -175,7 +179,7 @@ In this task, you will import an existing CI YAML pipeline definition, modify an
 1. Click on **Access Keys**. Select **Show** and copy the **password** value, it will be used in the following task, as we will keep it as a secret  in Azure Key Vault.
     > **Note**: If you do not see password field, please select the **Admin user** chceckbox to Enabled.
 
-    ![ACR password](images/lab-400-7.png)
+    ![ACR password](images/az-400-jan25-9.png)
 
 ## Task 3: Create an Azure Key vault
 
