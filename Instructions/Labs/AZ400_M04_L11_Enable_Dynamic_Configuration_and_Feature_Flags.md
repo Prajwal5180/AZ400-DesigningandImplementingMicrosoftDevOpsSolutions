@@ -85,7 +85,7 @@ Let's start by importing the CI pipeline named **eshoponweb-ci.yml**.
 
       ![](images/33.newpipeline-4.png)
 
-   5. Select the **.ado/eshoponweb-cd-webapp-code.yml(1)** file then click on **Continue(2)**
+   5. Select the **/.ado/eshoponweb-cd-webapp-code.yml(1)** file then click on **Continue(2)**
 
       ![](images/33.newpipeline-4-1.png)
    
@@ -132,7 +132,7 @@ If you want to know how to implement this in your application, please take a loo
    
 2. Click **Create app configuration** then select:
     - Your Azure Subscription(1)
-    - The Resource Group **(2)** created previously (it should be named **AZ400-EWebShop1-<inject key="DeploymentID" enableCopy="false"/>**)
+    - The Resource Group **(2)** created previously (it should be named **AZ400-EWebShop-<inject key="DeploymentID" enableCopy="false"/>**)
     - Retain the same region which is in the CD Pipeline previously **(3)**
     - Give a unique name **appcs-<inject key="DeploymentID" enableCopy="false"/>** **(4)**.
     - Select the **Free(5)** pricing tier
@@ -149,7 +149,7 @@ If you want to know how to implement this in your application, please take a loo
 
 ## Task 2: Enable Managed Identity
 
-1. Go to the **Web App(1)** deployed using the pipeline (it should be named **az400-webapp-NAME**).
+1. Go to the **Web App(1)** deployed using the pipeline (it should be named **az400-webapp-<inject key="DeploymentID" enableCopy="false"/>**).
 
    ![](images/44.webapp-1.png)
    
@@ -171,7 +171,7 @@ If you want to know how to implement this in your application, please take a loo
 
    ![](images/49.roleassinment-3.png)
    
-6. Click on **Review and assign**
+6. Click on **Review + assign** twice.
 
    ![](images/50.roleassignment-4.png)
 
@@ -195,11 +195,11 @@ In order to make sure that your website is accessing App Configuration, you need
       
     - Second app setting
         - **Name:** AppConfigEndpoint
-        - **Value:** *the value you saved/copied previously from App Configuration Endpoint. It should look like https://appcs-NAME-REGION.azconfig.io*
+        - **Value:** *the value you saved/copied previously from App Configuration Endpoint. It should look like https://appcs-<inject key="DeploymentID" enableCopy="false"/>.azconfig.io*
       
          ![](images/53.2ndappsetting.png)
       
-5. Click on **Apply** then **Continue** and wait for the settings to be updated.
+5. Click on **Apply** then **Confirm** and wait for the settings to be updated.
    
 6. Go to **Overview(1)** and click on **Browse(2)**
 
@@ -238,14 +238,14 @@ Let's continue to test the Feature manager.
 
    ![](images/63.featureflag-1.png)
    
-2. Click on **+ Create(4)** then add:
+2. Click on **+ Create(4)** and select **Feature flag** from the dropdown then add:
     - **Enable feature flag(1):** Checked
-    - **Feature flag name(2):** SalesWeekend
+    - **Feature flag name(2):** **SalesWeekend**
    and click **Apply(3)** then go back to your website and refresh the page.
    
    ![](images/64.salesweekend.png)
     
-3. You should see an image with text "ALL T-SHIRTS ON SALE THIS WEEKEND".
+3. You should see an image with text **ALL T-SHIRTS ON SALE THIS WEEKEND**.
 
    ![](images/65.websiteimage.png)
    
