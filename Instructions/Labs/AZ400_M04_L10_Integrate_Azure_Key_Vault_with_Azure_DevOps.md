@@ -44,7 +44,7 @@ In this exercise, you will set up the prerequisites for the lab, which consist o
 
 1. On the Azure Devops page click on **Azure DevOps(1)** located at top left corner and then click on **Organization Settings (2)** at the left down corner.
 
-    ![Azure DevOps](images/agent1updated.png)
+    ![Azure DevOps](images/az-400-jan25-42.png)
     
 1. In the **Organization Settings** window on the left menu click on **Billing (1)** and select **Setup Billing (2)**, It will automatically select your **azure subscription (3)** then click on **Save(4)**.
 
